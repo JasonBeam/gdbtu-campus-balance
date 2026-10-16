@@ -8,3 +8,4 @@ private/
 output/
 .playwright-cli/
 .venv/
+dist/

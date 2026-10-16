@@ -6,6 +6,21 @@
 
 ![Web Dashboard，演示数据](docs/images/dashboard-desktop.png)
 
+## Release 下载
+
+当前首版为 **v0.1.0 实验性预发布**：[下载附件与版本说明](https://github.com/JasonBeam/gdbtu-campus-balance/releases/tag/v0.1.0)。
+
+| 文件 | 内容 |
+| --- | --- |
+| `gdbtu-campus-balance-v0.1.0-source.zip` | 完整源码、Web 面板、工具、教程和许可 |
+| `gdbtu-campus-balance-v0.1.0-scriptable.zip` | 小组件、配置示例、教程和许可 |
+| `campus-balance-v0.1.0.js` | 可导入 Scriptable 的单文件，内附版权和字体许可声明 |
+
+附件附带 `SHA256SUMS.txt`。iPhone 可下载 `.js` 并通过分享菜单导入 Scriptable；也可下载小组件 ZIP，解压后复制脚本。电脑面板请下载完整源码 ZIP，解压后运行 `python3 server.py --demo`。
+
+[更新记录](CHANGELOG.md) · [贡献指南](CONTRIBUTING.md) · [稳定版验收计划](docs/ROADMAP.md) · [反馈问题](https://github.com/JasonBeam/gdbtu-campus-balance/issues/new/choose)
+
+
 ## 能做什么
 
 - **Scriptable 小组件**：Small / Medium，个人参数存入 Keychain。
