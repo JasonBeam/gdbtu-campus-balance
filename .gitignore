@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+config.local.json
+*.har
+*.pcap*
+private/
+output/
+.playwright-cli/
+.venv/

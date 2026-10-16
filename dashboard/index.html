@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f7f8fa"><title>校园余额 · GDBTU</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/style.css"></head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+<svg class="icon-defs" aria-hidden="true"><defs>
+<symbol id="overview" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+<symbol id="history" viewBox="0 0 24 24"><path d="M3 11a9 9 0 1 1 2.6 7M3 4v7h7m2-5v6l4 2"/></symbol>
+<symbol id="quality" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 4-5 7-8 9-3-2-8-5-8-9V6zM8 12l3 3 5-6"/></symbol>
+<symbol id="display" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></symbol>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="m8 5 7 7-7 7"/></symbol>
+<symbol id="download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+<symbol id="info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+<symbol id="theme" viewBox="0 0 24 24"><path d="M20 14a8 8 0 0 1-10-10 8.5 8.5 0 1 0 10 10Z"/></symbol>
+<symbol id="refresh" viewBox="0 0 24 24"><path d="M20 8A8 8 0 0 0 6 6L3 9m0-5v5h5m-4 7a8 8 0 0 0 14 2l3-3m0 5v-5h-5"/></symbol>
+<symbol id="keyboard" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 9h1m4 0h1m4 0h1M6 12h1m4 0h1m4 0h1m-9 4h8"/></symbol>
+<symbol id="mouse" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="6"/><path d="M12 2v7m-6 1h12"/></symbol>
+<symbol id="bolt" viewBox="0 0 24 24"><path d="m14 2-9 12h6l-1 8 9-12h-6z"/></symbol>
+<symbol id="card" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 10h20m-16 5h4"/></symbol>
+</defs></svg>
+<div class="app">
+<aside class="sidebar"><a class="brand" href="?view=overview"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span>GDBTU<span class="brand-sub">CAMPUS DASHBOARD</span></span></a>
+<div class="workspace"><span class="workspace-icon">BJ</span><div><strong>校园生活</strong><span>广东工商职业技术大学</span></div><span class="workspace-dot"></span></div>
+<p class="nav-label">工作空间</p><nav id="nav" aria-label="主导航"><a data-view="overview" href="?view=overview"><svg><use href="#overview"/></svg>数据总览</a><a data-view="records" href="?view=records"><svg><use href="#history"/></svg>校园余额记录<span class="nav-count" id="navCount">--</span></a><a data-view="quality" href="?view=quality"><svg><use href="#quality"/></svg>数据状态</a></nav>
+<div class="sidebar-note"><span class="tiny-dot"></span>个人查询工作区<p>独立记录库，不依赖设备</p></div>
+<div class="sidebar-bottom"><button id="helpButton"><svg><use href="#info"/></svg>记录规则与说明</button><div class="user"><span class="avatar">B</span><div><strong>GDBTU</strong><span>LOCAL WORKSPACE</span></div></div></div></aside>
+<div class="workspace-main"><header class="topbar"><span class="breadcrumb">校园生活 <span>/</span> <strong id="crumb">数据总览</strong></span><div class="top-controls"><span class="preview-label">设计预览</span><button id="themeButton" class="icon-button" aria-label="切换深色模式"><svg><use href="#theme"/></svg></button><span class="avatar small">B</span></div></header>
+<main id="main"><section class="heading"><div><p class="eyebrow">YOUR EVERYDAY, AT A GLANCE</p><h1 id="pageTitle">数据总览</h1><p id="pageDesc">看看校园卡与电费，沿用原面板分别查看。</p></div><div class="heading-actions"><button id="exportButton" class="button"><svg><use href="#download"/></svg>导出余额记录</button><button id="recordButton" class="button primary">记录校园余额</button></div></section>
+<div class="toolbar"><div class="mode-switch" role="group" aria-label="数据模式"><button data-mode="demo">示例数据</button><button data-mode="real">真实数据</button></div><span id="modeNotice" class="data-notice" aria-live="polite">FIXTURE · 仅供预览</span><div class="period-switch" role="group" aria-label="统计周期"><button data-range="7">近 7 天</button><button data-range="30">近 30 天</button></div><button id="resetButton" class="text-button">重置筛选</button><button id="refreshButton" class="icon-button" aria-label="重新读取当前状态"><svg><use href="#refresh"/></svg></button></div>
+<p id="actionStatus" class="action-status" role="status"></p>
+
+<div id="view-overview" class="page-view">
+<section class="kpi-grid" aria-label="当前数据摘要">
+
+
+<article class="panel campus-card"><div class="card-head"><span class="card-label">校园余额</span><span id="campusStatus" class="status-chip">示例</span></div><div class="campus-metric"><span><svg><use href="#bolt"/></svg>电费余额</span><strong id="powerValue">--</strong></div><div class="campus-metric"><span><svg><use href="#card"/></svg>校园卡余额</span><strong id="cardValue">--</strong></div><div class="card-bottom" id="campusUpdated">数据更新 --</div></article>
+</section>
+<section class="analysis-grid">
+<article class="panel chart-panel"><div class="card-head"><div><h2>电费余额，单独看清</h2><p id="powerNarrative" class="chart-subtitle"></p></div><span class="unit-tag">CNY</span></div><div class="chart-caption"><span>电费余额变化，不等同消费流水</span><span class="chart-legend"><i class="legend-square amber"></i>电费 <span class="fixture-marker">FIXTURE</span></span></div><div id="powerChart" class="chart-container"></div><div class="chart-foot"><span id="powerCoverage">-- 条有效样本</span><a data-view="quality" href="?view=quality">查看数据口径 <svg><use href="#arrow"/></svg></a></div></article>
+<article class="panel chart-panel"><div class="card-head"><div><h2>校园卡余额，独立记录</h2><p id="cardNarrative" class="chart-subtitle"></p></div><span class="unit-tag">CNY</span></div><div class="chart-caption"><span>余额增加与减少，分别保留</span><span class="chart-legend"><i class="legend-square violet"></i>校园卡 <span class="fixture-marker">FIXTURE</span></span></div><div id="cardChart" class="chart-container"></div><div class="chart-foot"><span id="cardCoverage">-- 条有效样本</span><span class="fixture-marker">FIXTURE</span></div></article>
+</section>
+<section class="bottom-grid"><article class="panel records-panel"><div class="card-head"><div><h2>电费 · 最近记录</h2><p class="chart-subtitle">每次余额变化，保留来源。</p></div><a class="inline-link" data-view="records" href="?view=records">全部记录 <svg><use href="#arrow"/></svg></a></div><div class="table-scroll"><table><caption class="sr-only">最近电费余额记录</caption><thead><tr><th>数据时间</th><th class="numeric">余额</th><th class="numeric">变化</th><th>来源</th></tr></thead><tbody id="recentPowerRows"></tbody></table></div></article>
+<article class="panel records-panel"><div class="card-head"><div><h2>校园卡 · 最近记录</h2><p class="chart-subtitle">独立查看，不混入电费流水。</p></div><a class="inline-link" data-view="records" href="?view=records">全部记录 <svg><use href="#arrow"/></svg></a></div><div class="table-scroll"><table><caption class="sr-only">最近校园卡余额记录</caption><thead><tr><th>数据时间</th><th class="numeric">余额</th><th class="numeric">变化</th><th>来源</th></tr></thead><tbody id="recentCardRows"></tbody></table></div></article></section>
+
+</div>
+
+<div id="view-records" class="page-view" hidden><section class="panel journal-summary"><div><span class="card-label">独立预览账本 · 仅校园余额</span><h2 id="journalTitle">电费与校园卡，分别记录</h2><p id="journalSummary" class="chart-subtitle"></p></div><div><button id="autoButton" class="button">开始记录 · 每 30 秒</button><p id="autoNote" class="small-muted">服务运行时每 20 分钟检查一次</p></div></section><section class="record-sections"><article class="panel full-records"><div class="card-head"><h2>电费余额记录</h2><span class="unit-tag" id="powerRecordCount">0 条</span></div><div class="table-scroll"><table><caption class="sr-only">电费余额独立记录</caption><thead><tr><th>数据时间</th><th class="numeric">余额</th><th class="numeric">变化</th><th>来源 / 状态</th><th>本机采集时间</th></tr></thead><tbody id="powerRows"></tbody></table></div></article><article class="panel full-records"><div class="card-head"><h2>校园卡余额记录</h2><span class="unit-tag" id="cardRecordCount">0 条</span></div><div class="table-scroll"><table><caption class="sr-only">校园卡余额独立记录</caption><thead><tr><th>数据时间</th><th class="numeric">余额</th><th class="numeric">变化</th><th>来源 / 状态</th><th>本机采集时间</th></tr></thead><tbody id="cardRows"></tbody></table></div></article></section><div class="pagination"><span id="pageInfo"></span><div><button id="prevPage" class="button">上一页</button><button id="nextPage" class="button">下一页</button></div></div></div>
+
+<div id="view-quality" class="page-view" hidden><section class="panel quality-summary"><div><span class="card-label">记录可信度</span><h2 id="qualityTitle">示例数据，不参与真实记录</h2><p id="qualitySummary" class="chart-subtitle"></p></div><span class="quality-icon"><svg><use href="#quality"/></svg></span></section><section class="panel"><div class="card-head"><h2>校园数据源状态</h2><span id="checkedAt" class="small-muted">未读取</span></div><div class="table-scroll"><table><thead><tr><th>项目</th><th>来源</th><th>状态</th><th>数据更新时间</th><th>可用性</th></tr></thead><tbody id="qualityRows"></tbody></table></div></section><section class="rules-grid"><article class="panel"><h2>学校时间与查询时间</h2><p>学校返回的更新时间与本机查询时间分别保留。没有学校时间的余额可以查看，但不补造带来源时间的历史记录。</p></article><article class="panel"><h2>校园余额口径</h2><p>分别记录电费和校园卡的余额、来源和真实更新时间。余额差值不能判断具体交易；增加不直接认定为充值，减少不直接认定为消费。</p></article><article class="panel"><h2>本轮记录边界</h2><p>真实记录从首次采集开始，存入本机 private/campus.sqlite3；演示数据与真实记录隔离。没有学校时间时不新增历史。</p></article></section></div>
+
+<footer><span>校园余额 <span class="footer-dot">·</span> 让日常数据，安静地有迹可循。</span><span id="footerMode">预览模式 · 示例与真实记录隔离</span></footer>
+</main></div></div>
+<dialog id="helpDialog" aria-labelledby="helpTitle"><div class="dialog-head"><h2 id="helpTitle">先看清数据，再决定是否记录。</h2><button id="closeHelp" class="icon-button" aria-label="关闭说明">×</button></div><p>从原 Dashboard 提取校园余额板块，保留原卡片、走势图与记录布局。</p><dl><dt>示例数据</dt><dd>所有余额、时间和走势均为 FIXTURE，用来检查设计，不混入真实数据库。</dd><dt>真实记录</dt><dd>只将电费与校园卡快照分板块保存到独立预览 SQLite。相同 provider 时间与数值不会重复计入。</dd><dt>两个时间</dt><dd>“数据时间”来自 provider；“本机采集时间”才是此预览读取它的时间。不把旧缓存伪装成刚更新。</dd><dt>不夸大结论</dt><dd>无历史时不显示趋势、无样本时不显示假 0；余额差值不是消费流水，缓存不直接算消费。</dd></dl><a href="https://github.com/mares29/dashboard-design-skill" target="_blank" rel="noopener">设计参考：Dashboard Design Skill ↗</a></dialog>
+<script type="module" src="/app.js"></script>
+</body></html>
