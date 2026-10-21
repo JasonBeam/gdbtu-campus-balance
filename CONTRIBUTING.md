@@ -12,7 +12,8 @@
 ```sh
 python3 -m unittest discover -s tests -v
 node tests/test_scriptable.cjs
-node tests/test_export.cjs```
+node tests/test_export.cjs
+```
 
 ## 版本发布
 
