@@ -1,6 +1,6 @@
 export const labels={whale:'LOT 剩余',power:'电费余额',card:'校园卡余额'};
 export const states={live:'实时',stale:'过期待更新',offline:'离线',cache:'缓存',refreshing:'更新中',demo:'示例',queried:'查询成功'};
-export const sourceNames={device_direct:'设备直连',companion_cache:'Companion 缓存',device:'ESP32',companion:'Companion',demo:'示例数据',school:'学校接口',unavailable:'未获取'};
+export const sourceNames={device_direct:'设备直连',companion_cache:'Companion 缓存',device:'外接设备',companion:'Companion',demo:'示例数据',school:'学校接口',unavailable:'未获取'};
 export const fmt=(n,digits=1)=>typeof n==='number'&&Number.isFinite(n)?new Intl.NumberFormat('zh-CN',{minimumFractionDigits:digits,maximumFractionDigits:digits}).format(n):'--';
 export const time=(s,full=false)=>{const d=new Date(s);return s&&Number.isFinite(d.getTime())?new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',...(full?{month:'2-digit',day:'2-digit'}:{}),hour:'2-digit',minute:'2-digit',hour12:false}).format(d):'--';};
 export function metricValid(m){return m?.available===true&&typeof m.value==='number'&&Number.isFinite(m.value);}

@@ -137,7 +137,7 @@ document.addEventListener('focusin',e=>{if(e.target.dataset.tip)showTip(e.target
 window.addEventListener('popstate',()=>{parseURL();page=0;render();if(mode==='real'&&!hasRead)refresh();});
 try{const saved=localStorage.getItem('beam-dashboard-preview-theme');if(saved==='dark')document.documentElement.dataset.theme='dark';}catch{}
 document.querySelector('.preview-label').textContent='校园余额 · GDBTU';
-document.querySelector('.sidebar-note').innerHTML='<span class="tiny-dot"></span>个人查询工作区<p>不依赖 ESP32 设备</p>';
+document.querySelector('.sidebar-note').innerHTML='<span class="tiny-dot"></span>个人查询工作区<p>iPhone 小组件 · 电脑面板</p>';
 $('autoNote').textContent='服务运行时每 20 分钟检查；有学校时间才记录。';
 parseURL();render();if(mode==='real')refresh();
 setInterval(()=>{if(mode==='real'&&!document.hidden)refresh();},60000);
