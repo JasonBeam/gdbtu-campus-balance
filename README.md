@@ -1,12 +1,18 @@
-# 校园余额 · GDBTU
+# 📱 校园余额 · GDBTU
 
-**把校园卡余额和宿舍电费，放到每天看得到的地方。**
+广东工商职业技术大学的非官方校园余额查询工具。把校园卡余额和宿舍电费放到 iPhone 与电脑上查看：iPhone 使用 Scriptable 桌面小组件，电脑运行本地 Web Dashboard，同时保留原项目的点阵数字、校园卡片、走势图和记录表。
 
-面向广东工商职业技术大学的个人查询工具：iPhone 用 Scriptable 小组件，电脑用 Web Dashboard。保留原来的点阵数字、校园卡片、走势图和记录表，让两种余额在手机和电脑上都更方便查看。
+配置优先尝试从本人已登录的学校官方网页导出，复用已选宿舍的最终节点，减少手动查找和填写楼栋、楼层与房号。若当前网页登录环境不适用，教程也保留抓包备用方法。
 
-[下载 v0.1.0](https://github.com/JasonBeam/gdbtu-campus-balance/releases/tag/v0.1.0) · [配置提取教程](docs/setup.md) · [用 AI 帮你上手](docs/ai-guide.md) · [问题反馈](https://github.com/JasonBeam/gdbtu-campus-balance/issues/new/choose)
+📦 [下载 Scriptable 单文件](https://github.com/JasonBeam/gdbtu-campus-balance/releases/download/v0.1.0/campus-balance-v0.1.0.js) · [下载完整源码](https://github.com/JasonBeam/gdbtu-campus-balance/releases/download/v0.1.0/gdbtu-campus-balance-v0.1.0-source.zip) · [全部版本与附件](https://github.com/JasonBeam/gdbtu-campus-balance/releases/tag/v0.1.0)
 
-> 当前为 **v0.1.0 实验性预发布**。官方页面导出配置已通过静态审查和模拟测试，真实登录会话的完整流程仍待验证；不能保证所有人免抓包。本项目是非官方个人工具。
+📖 [iPhone 小组件安装](#iphone-小组件) · [电脑面板使用](#电脑面板)
+
+🔗 [配置提取教程](docs/setup.md) · [AI 辅助上手](docs/ai-guide.md)
+
+✨ [功能与使用方式](#选一种使用方式) · [界面预览](docs/previews.md) · [审查记录](docs/review.md)
+
+> 当前版本为 **v0.1.0 实验性预发布**。官方页面配置导出已通过静态审查和模拟测试，真实登录后的完整流程仍待验证；不保证所有账号和客户端都能免抓包。本项目为非官方个人工具。
 
 ![沿用原面板的校园余额 Dashboard，金额与走势均为演示数据](docs/images/dashboard-desktop.png)
 
@@ -34,7 +40,7 @@
 左图是现用个人脚本的真实预览，右图是独立版的实机演示。两者分别说明原样式和独立版渲染效果，不代表独立版的真实账户查询已完成验收。
 
 1. 安装 [Scriptable](https://scriptable.app/)。
-2. 从 [v0.1.0 Release](https://github.com/JasonBeam/gdbtu-campus-balance/releases/tag/v0.1.0) 下载 `campus-balance-v0.1.0.js`，通过 iPhone 分享菜单导入 Scriptable；也可新建脚本，复制[仓库中的完整脚本](scriptable/%E6%A0%A1%E5%9B%AD%E4%BD%99%E9%A2%9D.js)。
+2. 下载 [Scriptable 单文件 v0.1.0](https://github.com/JasonBeam/gdbtu-campus-balance/releases/download/v0.1.0/campus-balance-v0.1.0.js)，通过 iPhone 分享菜单导入 Scriptable；也可新建脚本，复制[仓库中的完整脚本](scriptable/%E6%A0%A1%E5%9B%AD%E4%BD%99%E9%A2%9D.js)。
 3. 运行脚本，先选“预览演示数据”，确认界面能显示。
 4. 按[配置提取教程](docs/setup.md)取得自己的配置，再选“导入官方页面配置”粘贴 JSON，或选“配置 / 更新参数”手动填写。
 5. 选“查询并预览”，与官方页面的同一账户、同一宿舍结果核对。
