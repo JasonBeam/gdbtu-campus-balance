@@ -2,9 +2,11 @@
 
 广东工商职业技术大学的非官方校园余额查询工具。把校园卡余额和宿舍电费放到 iPhone 与电脑上查看：iPhone 使用 Scriptable 桌面小组件，电脑运行本地 Web Dashboard，同时保留原项目的点阵数字、校园卡片、走势图和记录表。
 
-配置优先尝试从本人已登录的学校官方网页导出，复用已选宿舍的最终节点，减少手动查找和填写楼栋、楼层与房号。若当前网页登录环境不适用，教程也保留抓包备用方法。
+新版可在 Scriptable 中登录学校、选择宿舍并显示双余额；完整连续流程尚未完成 iPhone 真机验收。原来的官方网页导出方法仍可作为备用。详见[新版使用教程](docs/scriptable-login.md)。
 
-📦 [下载 Scriptable 单文件](https://github.com/JasonBeam/gdbtu-campus-balance/releases/download/v0.1.0/campus-balance-v0.1.0.js) · [下载完整源码](https://github.com/JasonBeam/gdbtu-campus-balance/releases/download/v0.1.0/gdbtu-campus-balance-v0.1.0-source.zip) · [全部版本与附件](https://github.com/JasonBeam/gdbtu-campus-balance/releases/tag/v0.1.0)
+**注意事项：**学校门户可能出现 “Errors Logged”，请以实际显示的宿舍和余额判断是否成功。请勿公开登录信息、导出配置或个人会话。
+
+📦 [下载新版 Scriptable 测试脚本](https://github.com/JasonBeam/gdbtu-campus-balance/releases/download/v0.2.0-candidate8/campus-balance-v0.2.0-candidate8.js) · [查看更新说明](https://github.com/JasonBeam/gdbtu-campus-balance/releases/tag/v0.2.0-candidate8) · [全部版本](https://github.com/JasonBeam/gdbtu-campus-balance/releases)
 
 📖 [iPhone 小组件安装](#iphone-小组件) · [电脑面板使用](#电脑面板)
 
@@ -12,7 +14,7 @@
 
 ✨ [功能与使用方式](#选一种使用方式) · [界面预览](docs/previews.md) · [审查记录](docs/review.md)
 
-> 当前版本为 **v0.1.0 实验性预发布**。官方页面配置导出已通过静态审查和模拟测试，真实登录后的完整流程仍待验证；不保证所有账号和客户端都能免抓包。本项目为非官方个人工具。
+> 新版 **v0.2.0-candidate8 为预发布测试版**。连续登录与宿舍选择流程已通过本地模拟测试，尚未完成 iPhone 真机验收；学校门户可能显示 “Errors Logged”。本项目为非官方个人工具。
 
 ![沿用原面板的校园余额 Dashboard，金额与走势均为演示数据](docs/images/dashboard-desktop.png)
 
@@ -40,11 +42,12 @@
 左图是现用个人脚本的真实预览，右图是独立版的实机演示。两者分别说明原样式和独立版渲染效果，不代表独立版的真实账户查询已完成验收。
 
 1. 安装 [Scriptable](https://scriptable.app/)。
-2. 下载 [Scriptable 单文件 v0.1.0](https://github.com/JasonBeam/gdbtu-campus-balance/releases/download/v0.1.0/campus-balance-v0.1.0.js)，通过 iPhone 分享菜单导入 Scriptable；也可新建脚本，复制[仓库中的完整脚本](scriptable/%E6%A0%A1%E5%9B%AD%E4%BD%99%E9%A2%9D.js)。
-3. 运行脚本，先选“预览演示数据”，确认界面能显示。
-4. 按[配置提取教程](docs/setup.md)取得自己的配置，再选“导入官方页面配置”粘贴 JSON，或选“配置 / 更新参数”手动填写。
-5. 选“查询并预览”，与官方页面的同一账户、同一宿舍结果核对。
-6. 在主屏幕添加 Scriptable 小组件，选择该脚本。组件参数填 `demo` 可展示演示数据；查看自己的余额时，将组件参数留空。
+2. 下载 [Scriptable 单文件 v0.2.0-candidate8](https://github.com/JasonBeam/gdbtu-campus-balance/releases/download/v0.2.0-candidate8/campus-balance-v0.2.0-candidate8.js)，通过 iPhone 分享菜单导入 Scriptable；也可新建脚本，复制[仓库中的完整脚本](scriptable/%E6%A0%A1%E5%9B%AD%E4%BD%99%E9%A2%9D.js)。
+3. 运行脚本，选择“登录学校 · 自动获取”，使用本人账号完成学校官方登录。
+4. 按提示核对宿舍、电表和余额，确认后保存。也可在“更多工具”预览演示数据或导入已有配置。
+5. 在主屏幕添加 Scriptable 小组件，选择该脚本。查看自己的余额时，组件参数留空。
+
+详细步骤与注意事项见[新版使用教程](docs/scriptable-login.md)。
 
 支持 Small / Medium。Small 演示已在真实 iPhone 上检查；Medium 实机布局及后台刷新仍待验证。iOS 决定实际刷新时机，20 分钟是缓存与建议刷新间隔，不保证准点更新。
 
@@ -97,16 +100,16 @@ AI 是可选的操作助手。它不能凭文字房号猜出系统 ID，也不�
 
 ## 下载文件怎么选
 
-当前 Release 为 [v0.1.0 实验性预发布](https://github.com/JasonBeam/gdbtu-campus-balance/releases/tag/v0.1.0)：
+当前新版为 [v0.2.0-candidate8 预发布](https://github.com/JasonBeam/gdbtu-campus-balance/releases/tag/v0.2.0-candidate8)：
 
 | 文件 | 适用场景 |
 | --- | --- |
-| `campus-balance-v0.1.0.js` | 只安装 iPhone 小组件 |
-| `gdbtu-campus-balance-v0.1.0-scriptable.zip` | 小组件、配置示例、教程与许可 |
-| `gdbtu-campus-balance-v0.1.0-source.zip` | 完整源码、电脑面板与工具 |
+| `campus-balance-v0.2.0-candidate8.js` | 只安装 iPhone 小组件 |
+| `gdbtu-campus-balance-v0.2.0-candidate8-scriptable.zip` | 小组件、配置示例、教程与许可 |
+| `gdbtu-campus-balance-v0.2.0-candidate8-source.zip` | 完整源码、电脑面板与工具 |
 | `SHA256SUMS.txt` | 校验附件完整性 |
 
-不使用 Git 也可以下载源码 ZIP，解压后进入包含 `server.py` 的文件夹运行。**本页与 AI 教程跟随 `main` 更新，v0.1.0 附件仍是对应版本的固定内容。**
+不使用 Git 也可以下载源码 ZIP，解压后进入包含 `server.py` 的文件夹运行。**本页与 AI 教程跟随 `main` 更新，Release 附件对应各自的固定版本。**
 
 ## 参数、记录与使用边界
 
