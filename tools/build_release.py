@@ -38,7 +38,8 @@ def build(version, output, revision='HEAD'):
     if CAMPUS:
         archive(f'{REPO}-{version}-scriptable.zip',
                 ('scriptable', 'config.example.json', 'docs', 'tools/export-official-session.js',
-                 'tools/make_bookmarklet.py', 'README.md', 'LICENSE', 'SECURITY.md', 'CHANGELOG.md'))
+                 'tools/make_bookmarklet.py', 'tools/onboarding-core.js', 'tools/onboarding',
+                 'tools/sync_onboarding.py', 'README.md', 'LICENSE', 'SECURITY.md', 'CHANGELOG.md'))
         name = f'campus-balance-{version}.js'
         content = git('show', f'{commit}:scriptable/校园余额.js')
         # Keep MIT and font license notices when sharing the single-file widget.
